@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import {Script, console} from "forge-std/Script.sol";
 import "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import "src/Friegeld_USDC.sol";
-import "lib/Modular-Tokenomics-Group-4/contracts/DemurrageFee.sol";
+import "lib/Modular-Tokenomics/contracts/DemurrageFee.sol";
 
 contract Friegeld_USDCScript is Script {
     //IERC20 usdc;
