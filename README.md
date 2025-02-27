@@ -57,7 +57,26 @@ You can access the Remix IDE through TOR, but it sort of breaks. So, if you are 
 3. Copy & paste the code from [/src/MyCoin.sol](https://github.com/csmit863/workshop_week1/blob/main/src/MyCoin.sol)
 4. Uncomment the line with '@openzeppelin', and comment out the line with 'openzeppelin-contracts'
  - it should look like this:
- - <img>
+```solidity
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.19;
+
+// uncomment if using remix:
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+
+// uncomment if using foundry:
+// import "openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
+
+
+contract MyCoin is ERC20 {
+    constructor()ERC20("My Coin","COIN")
+    {
+        _mint(msg.sender, 10*10**18);
+    }
+}
+```
+
 5. 
 
 **Method 2:** Foundry & Cast Wallet
