@@ -45,12 +45,33 @@ code does: it inherits the ERC20 standard, and it mints 10^18 MyCoin to the depl
 
 
 #### Deploying your token
+
+**Method 1**: Remix IDE 
+
+You will need to use your hotspot as the QUT WiFi currently blocks the Remix IDE (and all things crypto, unfortunately).
+
+1. Go to https://remix.ethereum.org
+2. Create a new file: MyCoin.sol
+3. Copy & paste the code from 
+
+**Method 2**: Foundry
+
 In order to deploy our token onto the blockchain, we first will need some ether, also known as gas. This is what is used 
 to pay for transactions, creating smart contracts, and interacting with smart contracts on Ethereum and other smart contract blockchains. 
 
 You are going to need a crypto wallet, luckily we can easily create one using Foundry's **Cast Wallet** commands.
 
-If you are a student, go to faucet.qutblockchain.club and enter your wallet address and student number (no 'n'). 
+Alternatively, if you want a more secure route, use your mobile wallet to store your test ether. Download a crypto wallet
+like **Metamask** or **Coinbase Wallet** which support test networks like Sepolia. Once you've created your wallet,
+copy your wallet address.
+
+If you are a student, you can go to faucet.qutblockchain.club and enter your wallet address and student email. 
+After verifying your email, you should receive some test ether to your crypto wallet on the **Sepolia** test network.
+This network is where we will deploy our coins for the time being.
+
+Alternatively if you can't access the faucet or are not a student, just ask someone in the club, or go to a public faucet such as google's sepolia eth faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+
+Now, you can use your test ether to deploy smart contracts and tokens! 
 
 
 
