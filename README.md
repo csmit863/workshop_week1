@@ -4,7 +4,7 @@
 #### Explanation
 Hello! Welcome to __🔥⚡😈LEVEL 2😈⚡🔥__ of our week 1 workshop.
 
-Please open up [/src/MyCoin.so)](https://github.com/csmit863/workshop_week1/blob/main/src/MyCoin.sol)
+Please open up [/src/MyCoin.sol](https://github.com/csmit863/workshop_week1/blob/main/src/MyCoin.sol)
 
 In this file you will see the most BASIC cryptocurrency you can make. It is essentially a boilerplate for creating tokens, but it was also built to introduce standards to tokens on Ethereum. Why?
 
