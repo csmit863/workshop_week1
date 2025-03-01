@@ -93,7 +93,7 @@ Now that you've verified that your wallet has ether, you can deploy the token!
 
 Type:
 ```
-forge create MyCoin --account my_wallet --rpc-url https://sepolia.drpc.org
+forge create MyCoin --account my_wallet --rpc-url https://sepolia.drpc.org --broadcast
 ```
 
 Your token exists now! And you will have minted some of those coins to your wallet. The 'deployed to' address is where you can interact with it on the blockchain. If you have a mobile wallet, you can select 'import tokens' and then paste that deployment address into the token address slot. It should automatically pick up the name and ticker of your coin, as well as your balance. Congrats!
