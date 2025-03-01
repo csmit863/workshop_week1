@@ -61,7 +61,7 @@ In the terminal, type:
 cast wallet new
 ```
 
-This will generate a **keypair**. The *address* is how others can send you crypto, and the *private key* is basically your password. Keep it safe and secret, but also, just don't use this as your actual wallet - there are much more secure ways to make a crypto wallet. 
+This will generate a **keypair**. The *address* is how others can send you crypto, and the *private key* is how you authorise transactions from this wallet. Keep it safe and secret, but also, just don't use this as your actual wallet - there are much more secure ways to make a crypto wallet. 
 
 4. **Import the private key into a wallet**
 
