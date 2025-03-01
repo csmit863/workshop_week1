@@ -36,6 +36,7 @@ Now that we understand the code, we can deploy it.
 Here's what you do.
 
 1. **Install Foundry**
+
 First, go download **Foundry**. It is super easy to setup. 
 
 [Get Foundry](https://book.getfoundry.sh/getting-started/installation)
@@ -43,6 +44,7 @@ First, go download **Foundry**. It is super easy to setup.
 After you've finished installing, open up your code editor such as VSCode/VSCodium.
 
 2. **Clone the repo**
+
 Clone the [repo](https://github.com/csmit863/workshop_week1) like so:
 ```
 git clone https://github.com/csmit863/workshop_week1
@@ -51,6 +53,7 @@ git clone https://github.com/csmit863/workshop_week1
 Go into the workshop_week1 folder.
 
 3. **Create a wallet keypair**
+
 Now we will create a crypto wallet in the terminal.
 
 In the terminal, type:
@@ -61,6 +64,7 @@ cast wallet new
 This will generate a **keypair**. The *address* is how others can send you crypto, and the *private key* is basically your password. Keep it safe and secret, but also, just don't use this as your actual wallet - there are much more secure ways to make a crypto wallet. 
 
 4. **Import the private key into a wallet**
+
 Now that you have **generated** a wallet, you need to **import** the wallet for Foundry to use. Copy paste that private key. Then to import, type:
 ```
 cast wallet import --interactive my_wallet
@@ -70,6 +74,7 @@ cast wallet import --interactive my_wallet
 When prompted for a private key, paste in your private key. You may also be prompted to set a password for this wallet.
 
 5. **Get testnet ether**
+
 The next step is to load up that wallet with **Sepolia Ether** so that you can deploy smart contracts on the **Sepolia Public Testnet**.
 
 If you are a student, you can go to [our faucet](https://faucet.qutblockchain.club) and enter your wallet address and student email. After verifying your email, you should receive some test ether to your crypto wallet on the **Sepolia** test network. This network is where we will deploy our coins for the time being.
@@ -83,6 +88,7 @@ cast balance <wallet address> --rpc-url https://sepolia.drpc.org
 *You can replace the rpc url with any rpc url you wish to use. You can find them with a quick google search.*
 
 6. **Deploy your coin**
+
 Now that you've verified that your wallet has ether, you can deploy the token!
 
 Type:
@@ -96,4 +102,5 @@ Your token exists now! And you will have minted some of those coins to your wall
 
 
 #### Finishing up
-There you go! You just created your first token, deployed straight onto the blockchain, with no middlemen or centralised databases. Congrats! Put it on your resume! Tell your grandma! 
+
+There you go! You just created your first token, deployed straight onto the blockchain, with no middlemen or centralised databases managing your token.
