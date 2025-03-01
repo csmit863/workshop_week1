@@ -33,70 +33,66 @@ Now that we understand the code, we can deploy it.
 
 #### Deploying your token
 
-**Before you proceed:**
-In order to deploy our token onto the blockchain, we first will need some ether, also known as gas. This is what is used to pay for transactions, creating smart contracts, and interacting with smart contracts on Ethereum and other smart contract blockchains. 
+Here's what you do.
 
+1. **Install Foundry**
+First, go download **Foundry**. It is super easy to setup. 
 
-**Method 1:** Remix IDE & Mobile Wallet (hotspot required)
+[Get Foundry](https://book.getfoundry.sh/getting-started/installation)
 
-Wallet:
-If you want to choose the easy (and arguably more secure) route, download a mobile wallet. Download a crypto wallet like **Metamask** or **Coinbase Wallet** which support test networks like Sepolia. Once you've created your wallet, copy your wallet address.
+After you've finished installing, open up your code editor such as VSCode/VSCodium.
+
+2. **Clone the repo**
+Clone the [repo](https://github.com/csmit863/workshop_week1) like so:
+```
+git clone https://github.com/csmit863/workshop_week1
+```
+
+Go into the workshop_week1 folder.
+
+3. **Create a wallet keypair**
+Now we will create a crypto wallet in the terminal.
+
+In the terminal, type:
+```
+cast wallet new
+```
+
+This will generate a **keypair**. The *address* is how others can send you crypto, and the *private key* is basically your password. Keep it safe and secret, but also, just don't use this as your actual wallet - there are much more secure ways to make a crypto wallet. 
+
+4. **Import the private key into a wallet**
+Now that you have **generated** a wallet, you need to **import** the wallet for Foundry to use. Copy paste that private key. Then to import, type:
+```
+cast wallet import --interactive my_wallet
+```
+*FYI, you can replace 'my_wallet' with whatever you want to name your wallet.*
+
+When prompted for a private key, paste in your private key. You may also be prompted to set a password for this wallet.
+
+5. **Get testnet ether**
+The next step is to load up that wallet with **Sepolia Ether** so that you can deploy smart contracts on the **Sepolia Public Testnet**.
 
 If you are a student, you can go to [our faucet](https://faucet.qutblockchain.club) and enter your wallet address and student email. After verifying your email, you should receive some test ether to your crypto wallet on the **Sepolia** test network. This network is where we will deploy our coins for the time being.
 
 Alternatively if you can't access the faucet or are not a student, just ask someone in the club, or go to a public faucet such as google's [Sepolia ether faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
-Now, you can use your test ether to deploy smart contracts and tokens! 
+You can check the balance of your wallet in the terminal using Foundry like so:
+```
+cast balance <wallet address> --rpc-url https://sepolia.drpc.org
+```
+*You can replace the rpc url with any rpc url you wish to use. You can find them with a quick google search.*
 
+6. **Deploy your coin**
+Now that you've verified that your wallet has ether, you can deploy the token!
 
-You will need to use your hotspot as the QUT WiFi currently blocks the Remix IDE (and all things crypto, unfortunately).
-You can access the Remix IDE through TOR, but it sort of breaks. So, if you are going with this option, use your hotspot.
-
-1. Go to the [Remix IDE](https://remix.ethereum.org)
-2. Create a new file: MyCoin.sol
-3. Copy & paste the code from [/src/MyCoin.sol](https://github.com/csmit863/workshop_week1/blob/main/src/MyCoin.sol)
-4. Uncomment the line with '@openzeppelin', and comment out the line with 'openzeppelin-contracts'
- - it should look like this:
-```solidity
-//SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
-
-// uncomment if using remix:
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-
-
-// uncomment if using foundry:
-// import "openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
-
-
-contract MyCoin is ERC20 {
-    constructor()ERC20("My Coin","COIN")
-    {
-        _mint(msg.sender, 10*10**18);
-    }
-}
+Type:
+```
+forge create MyCoin --account my_wallet --rpc-url https://sepolia.drpc.org
 ```
 
-5. 
+Your token exists now! And you will have minted some of those coins to your wallet. The 'deployed to' address is where you can interact with it on the blockchain. If you have a mobile wallet, you can select 'import tokens' and then paste that deployment address into the token address slot. It should automatically pick up the name and ticker of your coin, as well as your balance. Congrats!
 
-**Method 2:** Foundry & Cast Wallet
-
-Wallet:
-If you are more technically inclined and want to look like a cool hacker and use the terminal, you can create a wallet using Foundry's **Cast Wallet** commands. 
-
-If you are a student, you can go to [our faucet](https://faucet.qutblockchain.club) and enter your wallet address and student email. After verifying your email, you should receive some test ether to your crypto wallet on the **Sepolia** test network. This network is where we will deploy our coins for the time being.
-
-Alternatively if you can't access the faucet or are not a student, just ask someone in the club, or go to a public faucet such as google's [Sepolia ether faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
-
-Now, you can use your test ether to deploy smart contracts and tokens! 
-
-1. Download Git and Foundryup
-2. Clone this project
-3. Deploy the contract using 
-```
-forge create MyCoin --account <your cast wallet account name> --rpc-url https://sepolia.gateway.tenderly.co
-```
-4. Copy paste the 'deployed to' address and view it on Sepolia Scan
+*To deploy your coin on any other network, you must have an ether balance on that network, and a rpc url which will connect you to that network.*
 
 
 #### Finishing up
