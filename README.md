@@ -106,5 +106,3 @@ Your token exists now! And you will have minted some of those coins to your wall
 #### Finishing up
 
 There you go! You just created your first token, deployed straight onto the blockchain, with no middlemen or centralised databases managing your token.
-
-![maketoken](maketoken.png)
