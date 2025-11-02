@@ -1,6 +1,6 @@
 ### QUT Blockchain Club Week 1 Workshop
 # **Make Your Own Cryptocurrency**
-
+#### [Memecoin PSA](https://www.youtube.com/watch?v=OzpMRCeNuj0)
 #### Explanation
 Hello! Welcome to __🔥⚡😈LEVEL 2😈⚡🔥__ of our week 1 workshop.
 
